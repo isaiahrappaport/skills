@@ -38,12 +38,40 @@ p books[2][:title]
 
 # 6. Make a hash to store 3 different states and their captitals. Then add a new state and capital and print the hash to see the result.
 
+states = { nj: "trenton", washington: "dc", ny: "buffalo" }
+
+states[:colorado] = "denver"
+
+p states
+
 # 7. Make a hash to store a laptop's brand, model, and year. Then print each attribute on separate lines.
+
+laptop = { brand: "apple", model: "pro", year: 2022 }
+
+p laptop[:brand]
+p laptop[:model]
+p laptop[:year]
 
 # 8. Make an array of hashes to store the brand and model for 3 different laptops. Then print out the second laptop's model.
 
+laptops = [{ brand: "apple", model: "air", year: 2022 }, { brand: "dell", model: "hp2", year: 1998 }, { brand: "google", model: "chrome", year: 2012 }]
+
+p laptops[1][:model]
+
 # 9. Make a hash to store definitions for 2 different words. Then add a new word and definition and print the hash to see the result.
 
+words = { hello: "a greeting", goodbye: "a departure message" }
+
+words[:hi] = "another form of greeting"
+
+p words
+
 # 10. Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.
+
+shirt = { brand: "polo", color: "red", size: "M" }
+
+p shirt[:brand]
+p shirt[:color]
+p shirt[:size]
 
 # SOLUTIONS: https://gist.github.com/peterxjang/d257aec07882d78009bd796ed53f81bb
