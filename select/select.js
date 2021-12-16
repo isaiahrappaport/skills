@@ -8,6 +8,20 @@ function smallNumbers(numbers) {
     if (numbers[index] < 20) {
       lessThanTwenty.push(numbers[index]);
     }
+    index += 1;
+  }
+  return lessThanTwenty;
+}
+
+console.log(smallNumbers([2, 32, 80, 18, 12, 3]));
+
+function smallNumbers(numbers) {
+  var index = 0;
+  var lessThanTwenty = [];
+  while (index < numbers.length) {
+    if (numbers[index] < 20) {
+      lessThanTwenty.push(numbers[index]);
+    }
     index = index + 1;
   }
   return lessThanTwenty;
@@ -22,15 +36,29 @@ function wWords(words) {
   var index = 0;
   var wWords = [];
   while (index < words.length) {
-    if (words[index][0] === "w") {
+    if (words[index][0] != "w") {
       wWords.push(words[index]);
     }
-    index = index + 1;
+    index += 1;
   }
   return wWords;
 }
 
 console.log(wWords(["winner", "winner", "chicken", "dinner"]));
+
+// function wWords(words) {
+//   var index = 0;
+//   var wWords = [];
+//   while (index < words.length) {
+//     if (words[index][0] === "w") {
+//       wWords.push(words[index]);
+//     }
+//     index = index + 1;
+//   }
+//   return wWords;
+// }
+
+// console.log(wWords(["winner", "winner", "chicken", "dinner"]));
 
 var words = ["winner", "winner", "chicken", "dinner"];
 var onlyWWords = [];
