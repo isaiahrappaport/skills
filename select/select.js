@@ -95,17 +95,48 @@ var products = [
   { name: "book", price: 4 },
 ];
 var expensiveProducts = [];
+var index = 0;
 
-products.forEach(function (product) {
-  if (product["price"] > 5) {
-    expensiveProducts.push(product);
+while (index < products.length) {
+  if (products[index]["price"] > 5) {
+    expensiveProducts.push(products[index]);
   }
-});
+  index += 1;
+}
 
 console.log(expensiveProducts);
 
+// var products = [
+//   { name: "chair", price: 100 },
+//   { name: "pencil", price: 1 },
+//   { name: "book", price: 4 },
+// ];
+// var expensiveProducts = [];
+
+// products.forEach(function (product) {
+//   if (product["price"] > 5) {
+//     expensiveProducts.push(product);
+//   }
+// });
+
+// console.log(expensiveProducts);
+
 // #  4. Start with an array of numbers and create a new array with only the even numbers.
 // #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
+
+var allNumbers = [2, 4, 5, 1, 8, 9, 7];
+var evenNumbers = [];
+var index = 0;
+
+while (index < allNumbers.length) {
+  var number = allNumbers[index];
+  if (number % 2 === 0) {
+    evenNumbers.push(number);
+  }
+  index += 1;
+}
+
+console.log(evenNumbers);
 
 // var numbers = [2, 4, 5, 1, 8, 9, 7];
 // var evenNumbers = [];
