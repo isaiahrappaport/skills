@@ -186,11 +186,54 @@ while (index < words.length) {
 
 console.log(shortWords);
 
+var words = ["a", "man", "a", "plan", "a", "canal", "panama"];
+var shortWords = [];
+
+var index = 0;
+while (index < words.length) {
+  if (words[index].length < 4) {
+    shortWords.push(words[index]);
+  }
+  index += 1;
+}
+
+console.log(shortWords);
+
 // #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
 
+var items = [
+  { name: "chair", price: 100 },
+  { name: "pencil", price: 1 },
+  { name: "book", price: 4 },
+];
+smallItems = [];
+
+var index = 0;
+while (index < items.length) {
+  if (items[index]["name"].length < 6) {
+    smallItems.push(items[index]);
+  }
+  index += 1;
+}
+
+console.log(smallItems);
+
 // #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 // #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
+
+var numbers = [8, 23, 0, 44, 1980, 3];
+var smallNumbers = [];
+
+var index = 0;
+while (index < numbers.length) {
+  if (numbers[index] < 10) {
+    smallNumbers.push(numbers[index]);
+  }
+  index += 1;
+}
+
+console.log(smallNumbers);
 
 // #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 // #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
