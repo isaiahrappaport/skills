@@ -238,11 +238,62 @@ console.log(smallNumbers);
 // #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 // #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
+var words = ["big", "little", "good", "bad"];
+
+function noB(words) {
+  noB = [];
+  var index = 0;
+  while (index < words.length) {
+    if (words[index][0] != "b") {
+      noB.push(words[index]);
+    }
+    index += 1;
+  }
+  return noB;
+}
+
+console.log(noB(["big", "little", "good", "bad"]));
+
 // #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
+function lessThanTen(array) {
+  var index = 0;
+  var lessThanTen = [];
+  while (index < array.length) {
+    if (array[index]["price"] < 10) {
+      lessThanTen.push(array[index]);
+    }
+    index += 1;
+  }
+  return lessThanTen;
+}
+
+console.log(
+  lessThanTen([
+    { name: "chair", price: 100 },
+    { name: "pencil", price: 1 },
+    { name: "book", price: 4 },
+  ])
+);
+
 // # 10. Start with an array of numbers and create a new array with only the odd numbers.
 // #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
+
+function oddNumbers(numbers) {
+  var index = 0;
+  var oddNumbers = [];
+  while (index < numbers.length) {
+    number = numbers[index];
+    if (number % 2 != 0) {
+      oddNumbers.push(number);
+    }
+    index += 1;
+  }
+  return oddNumbers;
+}
+
+console.log(oddNumbers([2, 4, 5, 1, 8, 9, 7]));
 
 // # SOLUTIONS (using while loop): https://gist.github.com/peterxjang/7de16ed43ea506e98df3fa15074b84f8
 // # SOLUTIONS (using .each shortcut): https://gist.github.com/peterxjang/a702894841c7018ed8c127b647ae21f8
