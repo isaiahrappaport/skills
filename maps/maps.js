@@ -1,17 +1,29 @@
 // #  1. Start with an array of numbers and create a new array with each number times 3.
 // #     For example, [1, 2, 3] becomes [3, 6, 9].
 
-function multiplyByThree(numbers) {
+function MultiplyByThree(numbers) {
   var index = 0;
-  var newNumbers = [];
+  var multiplied = [];
   while (index < numbers.length) {
-    newNumbers.push(numbers[index] * 3);
-    index = index + 1;
+    multiplied.push(numbers[index] * 3);
+    index += 1;
   }
-  return newNumbers;
+  return multiplied;
 }
 
-console.log(multiplyByThree([4, 9, 10]));
+console.log(MultiplyByThree([1, 2, 3]));
+
+// function multiplyByThree(numbers) {
+//   var index = 0;
+//   var newNumbers = [];
+//   while (index < numbers.length) {
+//     newNumbers.push(numbers[index] * 3);
+//     index = index + 1;
+//   }
+//   return newNumbers;
+// }
+
+// console.log(multiplyByThree([4, 9, 10]));
 
 // numbers = [2, 4, 6]
 // new_numbers = []
@@ -40,17 +52,29 @@ console.log(multiplyByThree([4, 9, 10]));
 // #  2. Start with an array of strings and create a new array with each string upcased.
 // #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
 
-function upcaseWord(words) {
+function bigWords(words) {
   var index = 0;
-  var upcasedWords = [];
+  var bigWords = [];
   while (index < words.length) {
-    upcasedWords.push(words[index].toUpperCase());
-    index = index + 1;
+    bigWords.push(words[index].toUpperCase());
+    index += 1;
   }
-  return upcasedWords;
+  return bigWords;
 }
 
-console.log(upcaseWord(["hello", "shalom"]));
+console.log(bigWords(["i'm", "so", "big"]));
+
+// function upcaseWord(words) {
+//   var index = 0;
+//   var upcasedWords = [];
+//   while (index < words.length) {
+//     upcasedWords.push(words[index].toUpperCase());
+//     index = index + 1;
+//   }
+//   return upcasedWords;
+// }
+
+// console.log(upcaseWord(["hello", "shalom"]));
 
 // lower_cased = ["i'm so big!", "get me down!", "i like it up here!"]
 // upper_cased = []
@@ -83,22 +107,39 @@ console.log(upcaseWord(["hello", "shalom"]));
 // #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
 
-function nameSelector(people) {
+function namesOnly(people) {
   var index = 0;
   var names = [];
   while (index < people.length) {
-    names.push(people[index]["age"]);
-    index = index + 1;
+    names.push(people[index]["name"]);
+    index += 1;
   }
   return names;
 }
 
 console.log(
-  nameSelector([
-    { name: "John", age: 14 },
-    { name: "Jim", age: 15 },
+  namesOnly([
+    { name: "Alice", age: 27 },
+    { name: "Brian", age: 14 },
   ])
 );
+
+// function nameSelector(people) {
+//   var index = 0;
+//   var names = [];
+//   while (index < people.length) {
+//     names.push(people[index]["age"]);
+//     index = index + 1;
+//   }
+//   return names;
+// }
+
+// console.log(
+//   nameSelector([
+//     { name: "John", age: 14 },
+//     { name: "Jim", age: 15 },
+//   ])
+// );
 
 // person_info = [{ name: "John", age: 24 }, { name: "Jim", age: 14 }, { name: "Timothy", age: 27 }]
 // names = []
