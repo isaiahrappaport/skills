@@ -167,130 +167,68 @@ console.log(
 // #  4. Start with an array of numbers and create a new array with each number plus 7.
 // #     For example, [1, 2, 3] becomes [8, 9, 10].
 
-// numbers = [4, 7, 9]
-// plus_7 = []
+function addSeven(numbers) {
+  var plusSeven = [];
+  for (i = 0; i < numbers.length; i++) {
+    plusSeven.push(numbers[i] + 7);
+  }
+  return plusSeven;
+}
 
-// index = 0
-// while index < numbers.length
-//   plus_7 << numbers[index] + 7
-//   index = index + 1
-// end
-
-// p plus_7
-
-// plus_7 = []
-// numbers.each do |number|
-//   plus_7 << number + 7
-// end
-
-// p plus_7
-
-// plus_7 = numbers.map { |number| number + 7 }
-// p plus_7
+console.log(addSeven([1, 2, 3]));
 
 // #  5. Start with an array of strings and create a new array with each string's length.
 // #     For example, ["hello", "goodbye"] becomes [5, 7].
-// words = ["hello", "goodbye"]
-// lengths = []
 
-// index = 0
-// while index < words.length
-//   lengths << words[index].length
-//   index += 1
-// end
+function stringLength(words) {
+  var lengths = [];
+  for (i = 0; i < words.length; i++) {
+    lengths.push(words[i].length);
+  }
+  return lengths;
+}
 
-// p lengths
-
-// words = ["hello", "goodbye"]
-// lengths = []
-
-// words.each do |word|
-//   lengths << word.length
-// end
-
-// p lengths
-
-// words = ["hello", "goodbye"]
-// lengths = []
-
-// lengths = words.map do |word|
-//   word.length
-// end
-
-// p lengths
+console.log(stringLength(["hello", "goodbye"]));
 
 // #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
-// people = [{ name: "Frank", age: 17 }, { name: "Paula", age: 23 }]
+function ageSelector(people) {
+  var ages = [];
+  for (i = 0; i < people.length; i++) {
+    ages.push(people[i]["age"]);
+  }
+  return ages;
+}
 
-// ages = []
-
-// index = 0
-// while index < people.length
-//   ages << people[index][:age]
-//   index = index + 1
-// end
-
-// p ages
-
-// people = [{ name: "Frank", age: 17 }, { name: "Paula", age: 23 }]
-
-// ages = []
-
-// people.each do |person|
-//   ages << person[:age]
-// end
-
-// p ages
-
-// people = [{ name: "Frank", age: 17 }, { name: "Paula", age: 23 }]
-
-// ages = people.map do |person|
-//   person[:age]
-// end
-
-// p ages
+console.log(
+  ageSelector([
+    { name: "Alice", age: 27 },
+    { name: "Blane", age: 16 },
+  ])
+);
 
 // #  7. Start with an array of numbers and create a new array with each number divided by 2.
 // #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
 
-// numbers = [14, 30, 24]
-// divided_numbers = []
+function divideByTwo(numbers) {
+  var quotients = [];
+  for (i = 0; i < numbers.length; i++) {
+    quotients.push(numbers[i] / 2);
+  }
+  return quotients;
+}
 
-// index = 0
-// while index < numbers.length
-//   divided_numbers << numbers[index] / 2
-//   index = index + 1
-// end
-
-// p divided_numbers
-
-// numbers = [14, 30, 24]
-// divided_numbers = []
-
-// numbers.each do |number|
-//   divided_numbers << number / 2
-// end
-
-// p divided_numbers
-
-// numbers = [14, 30, 24]
-
-// divided_numbers = numbers.map do |number|
-//   number / 2
-// end
-
-// p divided_numbers
+console.log(divideByTwo([1, 2, 3]));
 
 // #  8. Start with an array of strings and create a new array with each string's first letter only.
 // #     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
-function firstLetter(array) {
-  return array[0][0];
-}
+// function firstLetter(array) {
+//   return array[0][0];
+// }
 
-console.log(firstLetter(["Hello", "Goodbye"]));
+// console.log(firstLetter(["Hello", "Goodbye"]));
 
 // # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
