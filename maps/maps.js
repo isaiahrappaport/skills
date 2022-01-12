@@ -224,6 +224,16 @@ console.log(divideByTwo([1, 2, 3]));
 // #  8. Start with an array of strings and create a new array with each string's first letter only.
 // #     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
+function firstLetter(string) {
+  var letters = [];
+  for (i = 0; i < string.length; i++) {
+    letters.push(string[i][0]);
+  }
+  return letters;
+}
+
+console.log(firstLetter(["hello", "goodbye"]));
+
 // function firstLetter(array) {
 //   return array[0][0];
 // }
@@ -232,6 +242,21 @@ console.log(divideByTwo([1, 2, 3]));
 
 // # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
+
+function ages(people) {
+  var ages = [];
+  for (i = 0; i < people.length; i++) {
+    ages.push(people[i]["age"] * 2);
+  }
+  return ages;
+}
+
+console.log(
+  ages([
+    { name: "Alice", age: 27 },
+    { name: "Blane", age: 16 },
+  ])
+);
 
 // # 10. Start with an array of numbers and create a new array with each number converted into a string.
 // #     For example, [1, 2, 3] becomes ["1", "2", "3"].
