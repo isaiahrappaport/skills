@@ -1,29 +1,34 @@
 #  1. Start with an array of numbers and create a new array with each number times 3.
 #     For example, [1, 2, 3] becomes [3, 6, 9].
 
-numbers = [2, 4, 6]
-new_numbers = []
-
+# WHILE LOOP
+numbers = [1, 2, 3]
+times_three = []
 index = 0
+
 while index < numbers.length
-  new_numbers << numbers[index] * 3
+  times_three << numbers[index] * 3
   index += 1
 end
-p new_numbers
 
-numbers = [2, 4, 6]
-new_numbers = []
+p times_three
 
+# EACH LOOP
+numbers = [1, 2, 3]
+times_three = []
 numbers.each do |number|
-  new_numbers << number * 3
+  times_three << number * 3
 end
-p new_numbers
 
-numbers = [2, 4, 6]
-new_numbers = numbers.map do |number|
+p times_three
+
+# MAP LOOP
+numbers = [1, 2, 3]
+times_three = numbers.map do |number|
   number * 3
 end
-p new_numbers
+
+p times_three
 
 #  2. Start with an array of strings and create a new array with each string upcased.
 #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].

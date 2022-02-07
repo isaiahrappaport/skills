@@ -261,6 +261,16 @@ console.log(
 // # 10. Start with an array of numbers and create a new array with each number converted into a string.
 // #     For example, [1, 2, 3] becomes ["1", "2", "3"].
 
+function toString(array) {
+  string = [];
+  for (i = 0; i < array.length; i++) {
+    string.push(array[i].toString());
+  }
+  return string;
+}
+
+console.log(toString([1, 2, 3]));
+
 // # SOLUTIONS (using while loop): https://gist.github.com/peterxjang/b9ac4390aad2301a2238efc95c904f3d
 // # SOLUTIONS (using .each shortcut): https://gist.github.com/peterxjang/66598fd7cdbc67fe663624e217cebbaf
 // # SOLUTIONS (using .map shortcut): https://gist.github.com/peterxjang/23a8f8a51601e4288ba3a8aa6d1f1c98
