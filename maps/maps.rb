@@ -33,33 +33,34 @@ p times_three
 #  2. Start with an array of strings and create a new array with each string upcased.
 #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
 
-lower_cased = ["i'm so big!", "get me down!", "i like it up here!"]
-upper_cased = []
+# WHILE LOOP
+lowercase_words = ["big", "yay"]
+uppercase_words = []
 
-index = 0
-while index < lower_cased.length
-  upper_cased << lower_cased[index].upcase
-  index = index + 1
+i = 0
+while i < lowercase_words.length
+  uppercase_words << lowercase_words[i].upcase
+  i += 1
 end
 
-p upper_cased
+p uppercase_words
 
-lower_cased = ["i'm so big!", "get me down!", "i like it up here!"]
-upper_cased = []
+# EACH LOOP
+lowercase_words = ["big", "yay"]
+uppercase_words = []
 
-lower_cased.each do |word|
-  upper_cased << word.upcase
+lowercase_words.each do |word|
+  uppercase_words << word.upcase
 end
+p uppercase_words
 
-p upper_cased
+# MAP LOOP
+lowercase_words = ["big", "yay"]
 
-lower_cased = ["i'm so big!", "get me down!", "i like it up here!"]
-
-upper_cased = lower_cased.map do |word|
+uppercase_words = lowercase_words.map do |word|
   word.upcase
 end
-
-p upper_cased
+p uppercase_words
 
 #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
@@ -67,48 +68,56 @@ p upper_cased
 person_info = [{ name: "John", age: 24 }, { name: "Jim", age: 14 }, { name: "Timothy", age: 27 }]
 names = []
 
-index = 0
-while index < person_info.length
-  names << person_info[index][:name]
-  index += 1
-end
+i = 0
 
+while i < person_info.length
+  names << person_info[i][:name]
+  i += 1
+end
 p names
 
+# EACH LOOP
+person_info = [{ name: "John", age: 24 }, { name: "Jim", age: 14 }, { name: "Timothy", age: 27 }]
 names = []
+
 person_info.each do |person|
   names << person[:name]
 end
-
 p names
 
-names = person_info.map { |person| person[:name] }
+# MAP LOOP
+person_info = [{ name: "John", age: 24 }, { name: "Jim", age: 14 }, { name: "Timothy", age: 27 }]
 
+names = person_info.map { |person| person[:name] }
 p names
 
 #  4. Start with an array of numbers and create a new array with each number plus 7.
 #     For example, [1, 2, 3] becomes [8, 9, 10].
 
+# WHILE LOOP
 numbers = [4, 7, 9]
-plus_7 = []
+plus_seven = []
 
-index = 0
-while index < numbers.length
-  plus_7 << numbers[index] + 7
-  index = index + 1
+i = 0
+while i < numbers.length
+  plus_seven << numbers[i] + 7
+  i += 1
 end
+p plus_seven
 
-p plus_7
+# EACH LOOP
+numbers = [4, 7, 9]
+plus_seven = []
 
-plus_7 = []
 numbers.each do |number|
-  plus_7 << number + 7
+  plus_seven << number + 7
 end
+p plus_seven
 
-p plus_7
-
-plus_7 = numbers.map { |number| number + 7 }
-p plus_7
+# MAP LOOP
+numbers = [4, 7, 9]
+plus_seven = numbers.map { |number| number + 7 }
+p plus_seven
 
 #  5. Start with an array of strings and create a new array with each string's length.
 #     For example, ["hello", "goodbye"] becomes [5, 7].
