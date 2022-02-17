@@ -121,34 +121,34 @@ p plus_seven
 
 #  5. Start with an array of strings and create a new array with each string's length.
 #     For example, ["hello", "goodbye"] becomes [5, 7].
-words = ["hello", "goodbye"]
-lengths = []
 
+# WHILE LOOP
+
+strings = ["hello", "goodbye"]
 index = 0
-while index < words.length
-  lengths << words[index].length
+string_length = []
+while index < strings.length
+  string_length << strings[index].length
   index += 1
 end
 
-p lengths
+p string_length
 
-words = ["hello", "goodbye"]
-lengths = []
+# EACH LOOP
 
-words.each do |word|
-  lengths << word.length
+strings = ["hello", "goodbye"]
+string_length = []
+strings.each do |word|
+  string_length << word.length
 end
 
-p lengths
+p string_length
 
-words = ["hello", "goodbye"]
-lengths = []
+# MAP LOOP
 
-lengths = words.map do |word|
-  word.length
-end
-
-p lengths
+strings = ["hello", "goodbye"]
+string_length = strings.map { |word| word.length }
+p string_length
 
 #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
