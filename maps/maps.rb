@@ -153,35 +153,7 @@ p string_length
 #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
-people = [{ name: "Frank", age: 17 }, { name: "Paula", age: 23 }]
-
-ages = []
-
-index = 0
-while index < people.length
-  ages << people[index][:age]
-  index = index + 1
-end
-
-p ages
-
-people = [{ name: "Frank", age: 17 }, { name: "Paula", age: 23 }]
-
-ages = []
-
-people.each do |person|
-  ages << person[:age]
-end
-
-p ages
-
-people = [{ name: "Frank", age: 17 }, { name: "Paula", age: 23 }]
-
-ages = people.map do |person|
-  person[:age]
-end
-
-p ages
+people = [{ name: "Alice", age: 27 }]
 
 #  7. Start with an array of numbers and create a new array with each number divided by 2.
 #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].

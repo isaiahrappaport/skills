@@ -1,17 +1,27 @@
 // #  1. Start with an array of numbers and create a new array with each number times 3.
 // #     For example, [1, 2, 3] becomes [3, 6, 9].
 
-function MultiplyByThree(numbers) {
-  var index = 0;
+// function MultiplyByThree(numbers) {
+//   var index = 0;
+//   var multiplied = [];
+//   while (index < numbers.length) {
+//     multiplied.push(numbers[index] * 3);
+//     index += 1;
+//   }
+//   return multiplied;
+// }
+
+// console.log(MultiplyByThree([1, 2, 3]));
+
+function multiplyByThree(numbers) {
   var multiplied = [];
-  while (index < numbers.length) {
-    multiplied.push(numbers[index] * 3);
-    index += 1;
+  for (i = 0; i < numbers.length; i += 1) {
+    multiplied.push(numbers[i] * 3);
   }
   return multiplied;
 }
 
-console.log(MultiplyByThree([1, 2, 3]));
+console.log(multiplyByThree([1, 2, 3]));
 
 // function multiplyByThree(numbers) {
 //   var index = 0;
