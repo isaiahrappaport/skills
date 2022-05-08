@@ -13,15 +13,15 @@
 
 // console.log(MultiplyByThree([1, 2, 3]));
 
-function multiplyByThree(numbers) {
-  var multiplied = [];
-  for (i = 0; i < numbers.length; i += 1) {
-    multiplied.push(numbers[i] * 3);
-  }
-  return multiplied;
-}
+// function multiplyByThree(numbers) {
+//   var multiplied = [];
+//   for (i = 0; i < numbers.length; i += 1) {
+//     multiplied.push(numbers[i] * 3);
+//   }
+//   return multiplied;
+// }
 
-console.log(multiplyByThree([1, 2, 3]));
+// console.log(multiplyByThree([1, 2, 3]));
 
 // function multiplyByThree(numbers) {
 //   var index = 0;
@@ -62,17 +62,27 @@ console.log(multiplyByThree([1, 2, 3]));
 // #  2. Start with an array of strings and create a new array with each string upcased.
 // #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
 
-function bigWords(words) {
-  var index = 0;
-  var bigWords = [];
-  while (index < words.length) {
-    bigWords.push(words[index].toUpperCase());
-    index += 1;
-  }
-  return bigWords;
-}
+// function bigWords(words) {
+//   var index = 0;
+//   var bigWords = [];
+//   while (index < words.length) {
+//     bigWords.push(words[index].toUpperCase());
+//     index += 1;
+//   }
+//   return bigWords;
+// }
 
-console.log(bigWords(["i'm", "so", "big"]));
+// console.log(bigWords(["i'm", "so", "big"]));
+
+// function smallToBig(words) {
+//   bigWords = [];
+//   for (i = 0; i < words.length; i += 1) {
+//     bigWords.push(words[i].toUpperCase());
+//   }
+//   return bigWords;
+// }
+
+// console.log(smallToBig(["hello", "goodbye"]));
 
 // function upcaseWord(words) {
 //   var index = 0;
@@ -117,12 +127,27 @@ console.log(bigWords(["i'm", "so", "big"]));
 // #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
 
+// function namesOnly(people) {
+//   var index = 0;
+//   var names = [];
+//   while (index < people.length) {
+//     names.push(people[index]["name"]);
+//     index += 1;
+//   }
+//   return names;
+// }
+
+// console.log(
+//   namesOnly([
+//     { name: "Alice", age: 27 },
+//     { name: "Brian", age: 14 },
+//   ])
+// );
+
 function namesOnly(people) {
-  var index = 0;
   var names = [];
-  while (index < people.length) {
-    names.push(people[index]["name"]);
-    index += 1;
+  for (i = 0; i < people.length; i += 1) {
+    names.push(people[i]["name"]);
   }
   return names;
 }
@@ -130,10 +155,9 @@ function namesOnly(people) {
 console.log(
   namesOnly([
     { name: "Alice", age: 27 },
-    { name: "Brian", age: 14 },
+    { name: "Jeff", age: 23 },
   ])
 );
-
 // function nameSelector(people) {
 //   var index = 0;
 //   var names = [];
