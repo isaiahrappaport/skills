@@ -122,6 +122,35 @@
 # #  5. Start with an array of strings and create a new array with each string's length.
 # #     For example, ["hello", "goodbye"] becomes [5, 7].
 
+# WHILE LOOP
+strings = ["hello", "goodbye"]
+length = []
+
+index = 0
+while index < strings.length
+  length << strings[index].length
+  index += 1
+end
+
+p length
+
+strings = ["hello", "goodbye"]
+length = []
+
+strings.each do |word|
+  length << word.length
+end
+
+p length
+
+strings = ["hello", "goodbye"]
+
+length = strings.map do |word|
+  word.length
+end
+
+p length
+
 # # WHILE LOOP
 
 # strings = ["hello", "goodbye"]
