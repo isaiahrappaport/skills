@@ -184,6 +184,18 @@ p length
 
 # people = [{ name: "Alice", age: 27 }]
 
+people = [{ name: "Alice", age: 21 }, { name: "John", age: 14 }]
+
+age = people.map do |person|
+  person[:age] + 2
+end
+
+p age
+
+age = people.map { |person| person[:age] }
+
+p age
+
 # #  7. Start with an array of numbers and create a new array with each number divided by 2.
 # #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
 
