@@ -1,6 +1,16 @@
 // #  1. Start with an array of numbers and create a new array with each number times 3.
 // #     For example, [1, 2, 3] becomes [3, 6, 9].
 
+function MultiplyByThree(numbers) {
+  var multiplied = [];
+  for (i = 0; i < numbers.length; i += 1) {
+    multiplied.push(numbers[i] * 3);
+  }
+  return multiplied;
+}
+
+console.log(MultiplyByThree([1, 2, 3]));
+
 // function MultiplyByThree(numbers) {
 //   var index = 0;
 //   var multiplied = [];
@@ -61,6 +71,15 @@
 
 // #  2. Start with an array of strings and create a new array with each string upcased.
 // #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
+
+function bigWords(words) {
+  var newWords = [];
+  for (i = 0; i < words.length; i += 1) {
+    newWords.push(words[i].toUpperCase());
+  }
+  return newWords;
+}
+console.log(bigWords(["hello", "goodbye"]));
 
 // function bigWords(words) {
 //   var index = 0;
@@ -126,6 +145,21 @@
 
 // #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
 // #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
+
+function nameSelect(people) {
+  var person = [];
+  for (i = 0; i < people.length; i += 1) {
+    person.push(people[i]["name"]);
+  }
+  return person;
+}
+
+console.log(
+  nameSelect([
+    { name: "Alice", age: 27 },
+    { name: "James", age: 16 },
+  ])
+);
 
 // function namesOnly(people) {
 //   var index = 0;
